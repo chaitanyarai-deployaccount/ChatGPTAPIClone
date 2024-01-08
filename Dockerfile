@@ -12,8 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Download the model file and place it in the root directory
 RUN wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q8_0.bin?download=true -O ./llama-2-7b-chat.ggmlv3.q8_0.bin
 
-
-
+COPY llama-2-7b-chat.ggmlv3.q8_0.bin .
 # Copy the rest of the application code
 COPY . .
 
